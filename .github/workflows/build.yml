@@ -16,5 +16,12 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: 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  # Needed to get PR information
+          SONAR_TOKEN: 311542ebc8ce283288410829c67bc8ab2396643d   #
+        with:
+          # Additional arguments for the sonarcloud scanner
+          args:             
+            # Unique keys of your project and organization. You can find them in SonarCloud > Information (bottom-left menu)
+            # mandatory
+            -Dsonar.projectKey=vb6
+            -Dsonar.organization=handreschavezc
